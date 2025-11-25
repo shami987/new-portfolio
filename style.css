@@ -1,0 +1,118 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #222;
+}
+
+/* Container for the blog post */
+.blog-post {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.blog-post img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.graduation {
+    display: flex;
+    gap: 10px;
+}
+/* ===== Headings ===== */
+.blog-post h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.blog-post h2 {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Author text */
+.blog-post > p:first-of-type {
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* Paragraphs */
+.blog-post p {
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+
+/* ===== Comments Section ===== */
+.comments {
+  margin-top: 60px;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.comments h2 {
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+}
+
+/* Form Layout */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Input groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 10px);
+}
+
+.input-group.full {
+  width: 100%;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Inputs & Textarea */
+input,
+textarea {
+  padding: 14px 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6b38ff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 56, 255, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Responsive: stack inputs on mobile */
+@media (max-width: 600px) {
+  .input-group {
+    width: 100%;
+  }
+}

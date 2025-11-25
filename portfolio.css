@@ -667,3 +667,54 @@ copyright {
   font-size: 13px;
   opacity: 0.8;
 }
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.5s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Dark mode styles*/
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+body.dark-mode nav {
+    background-color: #1f1f1f;
+}
+body.dark-mode .hero,
+body.dark-mode .about-section,
+body.dark-mode .projects-section,
+body.dark-mode .skills-section,
+body.dark-mode .experience-section,
+body.dark-mode .blog-section,
+body.dark-mode .testimonials,
+body.dark-mode .contact-section,
+body.dark-mode .footer {
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+}
+
+body.dark-mode a,
+body.dark-mode a.contact-btn,
+body.dark-mode .about-btn,
+body.dark-mode .red-btn,
+body.dark-mode .cta-btn a {
+    color: #ffffff;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .skill-card,
+body.dark-mode .blog-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .contact-left,
+body.dark-mode .contact-right {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+body.dark-mode .skill-card .skill-item {
+    color: #e75252; /* light gray */
+}
