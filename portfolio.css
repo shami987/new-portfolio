@@ -11,6 +11,9 @@ body {
 html {
     scroll-behavior: smooth;
 }
+section {
+    scroll-margin-top: 80px;
+}
 nav {
     display: flex;
     justify-content: space-between;
