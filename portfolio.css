@@ -721,5 +721,8 @@ body.dark-mode .contact-right {
     color: #e0e0e0;
 }
 body.dark-mode .skill-card .skill-item {
-    color: #e75252; /* light gray */
+    color: #555; /* light gray */
+}
+body.dark-mode .blog-card h3 {
+    color: #555;
 }
