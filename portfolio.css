@@ -148,7 +148,12 @@ color: #555;
         display: flex;
 
     }
-  
+    /* body.dark-mode #nav{
+        background-color: #1f1f1f;
+    } */
+   body.dark-mode #nav-links {
+        background-color: #1f1f1f;
+    }
 }
 /* About section */
 .about-section {
