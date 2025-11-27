@@ -70,3 +70,25 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
         alert("Failed to send email:\n" + JSON.stringify(err));
     });
 });
+
+//Codes for filtering
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter; // read the filter category
+
+        projectCards.forEach(card => {
+            if(filter === "all" || card.dataset.category === filter) {
+                card.style.display = "block"; // show
+            } else {
+                card.style.display = "none"; // hide
+            }
+        });
+    });
+});
