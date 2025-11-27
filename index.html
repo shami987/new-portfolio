@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
     <title>Document</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "c_yA5zfCrs8blq22w",
+      });
+   })();
+</script>
 </head>
 <body>
     <nav>
@@ -16,7 +26,7 @@
             <span id="open-icon">☰</span>
             <span id="close-icon" style="display:none;">X</span>
         </button>
-        <button id="dark-mode-toggle" style="border: none; cursor: pointer;">🌙</button>
+        
         <ul id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -26,7 +36,11 @@
             <li><a href="#blog">Blog</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
         </ul>
-        <a href="#contact" class="contact-btn">Contact</a>
+        <div>
+              <a href="#contact" class="contact-btn">Contact</a>
+              <button id="dark-mode-toggle" style="border: none; cursor: pointer;">🌙</button>
+        </div>
+      
     </nav>
 
     <section class="hero" id="home">
@@ -301,10 +315,15 @@
                         </div>
                     </div>
                     <div class="contact-right">
-                        <input type="text" placeholder="Name*"/>
-                        <input type="email" placeholder="Email"/>
-                        <textarea placeholder="Message*"></textarea>
-                        <button class="submit-btn">Submit</button>
+                        <form id="contact-form">
+                            
+
+                        <input type="text" placeholder="Name*" name="name" id="name" required/>
+                        <input type="email" placeholder="Email" name="email" id="email" required/>
+                        <textarea placeholder="Message*" name="message" id="message" required></textarea>
+                        <button class="submit-btn" type="submit">Submit</button>
+                        </form>
+                        
                           
                     </div>
                     

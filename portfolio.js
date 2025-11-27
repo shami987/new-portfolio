@@ -29,22 +29,44 @@ function reveal() {
 }
 window.addEventListener("scroll", reveal);
 
-//Dark mode toggle
-const toggleBtn = document.getElementById('dark-mode-toggle');
+
+//Toggle dark mode
+const toggleBtn =  document.getElementById("dark-mode-toggle");
 const body = document.body;
 
-//Load saved preference
-if(localStorage.getItem('darkMode') === 'enabled') {
-    body.classList.add('dark-mode');
-}
-//Toggle dark mode
-toggleBtn.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    //save preference
-    if(body.classList.contains('dark-mode')){
-        localStorage.setItem('darkMode', 'enabled');
-
-    } else {
-        localStorage.setItem('darkMode', 'disabled');
+  // Load saved mode
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️";
     }
+     toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            toggleBtn.textContent = "☀️"; // light mode icon
+            localStorage.setItem("theme", "dark");
+        } else {
+            toggleBtn.textContent = "🌙"; // dark mode icon
+            localStorage.setItem("theme", "light");
+        }
+    });
+
+    // Sending messages to email
+document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault(); // prevent page refresh
+
+    let parms = {
+        name : document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    }
+
+    emailjs.send("service_dgooe5c", "template_ev93dgl", parms)
+    .then(() => {
+        alert("Email sent successfully!");
+        document.getElementById("contact-form").reset();
+    })
+    .catch((err) => {
+        alert("Failed to send email:\n" + JSON.stringify(err));
+    });
 });
