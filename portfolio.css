@@ -137,6 +137,9 @@ color: #555;
     .menu-btn {
         display: block;
     }  
+    .contact-btn {
+        display: none;
+    }
     #nav-links {
          display: none;
         flex-direction: column;
@@ -151,6 +154,7 @@ color: #555;
         border-radius: 0 0 10px 10px;
         z-index: 10;
     }
+
     #nav-links.active {
         display: flex;
 
