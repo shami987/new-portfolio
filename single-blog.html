@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Post</title>
     <link rel="stylesheet" href="style.css" />
+
+
 </head>
 <body>
 
     <header class="navbar">
-        <h1 class="logo">S.Cephas</h1>
+        <h1 class="logo"><a href="index.html">S.Cephas</a></h1>
         
     </header>
 
@@ -159,6 +161,28 @@
 </section>
 
     </main>
+     <footer class="footer">
+                
+                <p class="footer-text">Developed with ❤️ by Cephas</p>
+                <p class="copyright">Copyright © 2025 Picto.</p>
+
+            </footer>
+                <script>
+  // Select the main article image
+  const articleImg = document.querySelector('.article-img');
+
+  // Select all recent items
+  const recentItems = document.querySelectorAll('.recent-item img');
+
+  // Loop through each recent item image
+  recentItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Change the src of the main article image to the clicked one
+      articleImg.src = item.src;
+      articleImg.alt = item.alt;
+    });
+  });
+</script>
 
 </body>
 </html>
