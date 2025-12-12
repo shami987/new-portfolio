@@ -438,7 +438,7 @@ input:checked + .slider:before {
    Project CTA
 ========================== */
 .project-cta {
-    background: linear-gradient(135deg, #4c3cff, #3028ff);
+    background: linear-gradient(135deg, #0a0824, #0a0824);
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -462,27 +462,30 @@ input:checked + .slider:before {
 }
 
 .project-cta .cta-btn {
-    padding: 14px 40px;
-    background-color: #4c46ff;
+display: inline-block;
+    padding: 16px 48px;
+    background: #4c46ff;  /* deeper purple */
     color: white;
-    border:none;
-
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    border-radius: 8px;
+    border-radius: 12px;
+    border: none;
     text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
 }
 
 
 .project-cta .cta-btn:hover {
     background-color: #ececff;
-    color: #3028ff;
+    color: #070550;
     transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
-# cta-btn a{
+.project-cta .cta-btn a{
     text-decoration: none;
 }
+
 
 /* ==========================
    Responsive
