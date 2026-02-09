@@ -357,7 +357,7 @@ input:checked + .slider:before {
 /* Projects Grid */
 .projects-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -379,6 +379,10 @@ input:checked + .slider:before {
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.project-card:active {
+    border-radius: 0;
 }
 
 .project-img {
@@ -492,6 +496,7 @@ display: inline-block;
 ========================== */
 @media(max-width: 992px) {
     .projects-wrapper {
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
     .project-card h3 {
